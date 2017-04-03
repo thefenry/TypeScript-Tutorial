@@ -5,6 +5,7 @@
         "outDir": "dist",
         "target": "es5",
         "noImplicitAny": false,
+        "noEmitOnError": true,
         "sourceMap": false
     }
 }
