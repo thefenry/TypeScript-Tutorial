@@ -1,5 +1,8 @@
+var symbol:string = '#';
+var length:number = 7; //We are using type annotation syntax
+
 function genrateRandonID(){
-    return '#' + Math.random().toString(36).substr(2,7);
+    return symbol + Math.random().toString(36).substr(2,length);
 }
 
 function main(){
