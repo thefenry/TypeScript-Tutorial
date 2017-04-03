@@ -1,13 +1,19 @@
-var symbol:string = '#';
-var length:number = 7; //We are using type annotation syntax
+type ValidSymbol = '#' | '$';
 
-function genrateRandonID(){
-    return symbol + Math.random().toString(36).substr(2,length);
+function genrateRandomID(symbol:ValidSymbol, length:number): string {
+    return symbol + Math.random().toString(36).substr(2, length);
+}
+
+//Void doesnt return a value
+//Never does not progress. Never returns
+function userAlert(): never{
+    throw new Error('Fail');    
 }
 
 function main(){
     var appComponent = document.getElementById('app');
+
     setInterval(function(){
-        appComponent.innerHTML = genrateRandonID()
-    }, 1000)
+        appComponent.innerHTML = genrateRandomID('#', 7)
+    }, 1000);
 }
